@@ -51,6 +51,8 @@ venv\Scripts\activate
 rasa run actions --port 5055
 ```
 
+After all that is running navigate to [localhost:5173](http://localhost:5173)
+
 # Credits
 
 this project uses rasa open source and face-api.js
