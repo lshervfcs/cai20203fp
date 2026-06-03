@@ -1,0 +1,33 @@
+version: "3.1"
+
+rules:
+  - rule: Always respond to crisis immediately
+    steps:
+      - intent: express_crisis
+      - action: action_assess_risk
+      - action: utter_crisis_response
+
+  - rule: Respond to greet
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to thanks
+    steps:
+      - intent: thank
+      - action: utter_thank_response
+
+  - rule: Provide resources when asked
+    steps:
+      - intent: ask_resources
+      - action: utter_share_resources
+
+  - rule: Breathing exercise when asked
+    steps:
+      - intent: ask_breathing
+      - action: utter_breathing_exercise

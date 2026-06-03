@@ -1,0 +1,105 @@
+version: "3.1"
+
+stories:
+  - story: greet and check in
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: user feels sad
+    steps:
+      - intent: express_sadness
+      - action: action_assess_risk
+      - action: utter_acknowledge_sadness
+      - intent: ask_for_help
+      - action: utter_suggest_activities
+
+  - story: user feels anxious wants breathing
+    steps:
+      - intent: express_anxiety
+      - action: action_assess_risk
+      - action: utter_acknowledge_anxiety
+      - intent: affirm
+      - action: utter_breathing_exercise
+
+  - story: user feels anxious declines breathing
+    steps:
+      - intent: express_anxiety
+      - action: action_assess_risk
+      - action: utter_acknowledge_anxiety
+      - intent: deny
+      - action: utter_suggest_activities
+
+  - story: user feels stressed
+    steps:
+      - intent: express_stress
+      - action: action_assess_risk
+      - action: utter_acknowledge_stress
+
+  - story: user feels hopeless
+    steps:
+      - intent: express_hopelessness
+      - action: action_assess_risk
+      - action: utter_acknowledge_hopelessness
+      - intent: ask_for_help
+      - action: utter_share_resources
+
+  - story: crisis situation
+    steps:
+      - intent: express_crisis
+      - action: action_assess_risk
+      - action: utter_crisis_response
+
+  - story: user asks for resources
+    steps:
+      - intent: ask_resources
+      - action: utter_share_resources
+
+  - story: user shares positive
+    steps:
+      - intent: share_positive
+      - action: utter_positive_reinforcement
+
+  - story: user asks for breathing exercise directly
+    steps:
+      - intent: ask_breathing
+      - action: utter_breathing_exercise
+
+  - story: user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: small talk
+    steps:
+      - intent: small_talk
+      - action: utter_small_talk
+
+  - story: user says thank you
+    steps:
+      - intent: thank
+      - action: utter_thank_response
+
+  - story: greet then sad then resources
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: express_sadness
+      - action: action_assess_risk
+      - action: utter_acknowledge_sadness
+      - intent: ask_resources
+      - action: utter_share_resources
+      - intent: thank
+      - action: utter_thank_response
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: stress to breathing exercise
+    steps:
+      - intent: express_stress
+      - action: action_assess_risk
+      - action: utter_acknowledge_stress
+      - intent: ask_breathing
+      - action: utter_breathing_exercise
+      - intent: affirm
+      - action: utter_suggest_activities

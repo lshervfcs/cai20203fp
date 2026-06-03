@@ -1,0 +1,221 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey
+      - hey there
+      - good morning
+      - good evening
+      - hi yr
+      - hello yr
+      - sup
+      - heyy
+      - heyyy
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you
+      - see ya
+      - gotta go
+      - talk later
+      - i have to go now
+      - ttyl
+      - night
+      - good night
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yeah
+      - yep
+      - sure
+      - okay
+      - ok
+      - sounds good
+      - that works
+      - definitely
+      - of course
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - not really
+      - no thanks
+      - i'm fine
+      - dont want to
+      - maybe later
+      - nah
+
+  - intent: express_sadness
+    examples: |
+      - i feel sad
+      - i'm sad
+      - i've been crying
+      - i feel like crying
+      - i feel down
+      - i'm feeling really low
+      - everything feels heavy
+      - i feel empty
+      - i've been really depressed
+      - i don't feel like doing anything
+      - i feel so alone
+      - i'm lonely
+      - i feel lost
+      - nothing makes me happy anymore
+      - i feel numb
+      - i just feel like lying in bed all day
+      - i've been feeling really down lately
+      - i feel disconnected from everyone
+      - i feel like no one understands me
+
+  - intent: express_anxiety
+    examples: |
+      - i feel anxious
+      - i'm anxious
+      - i can't stop worrying
+      - i feel nervous
+      - i'm having a panic attack
+      - my heart is racing
+      - i feel panicked
+      - i keep overthinking
+      - i can't calm down
+      - i feel on edge
+      - i'm so stressed about everything
+      - i feel like something bad is going to happen
+      - i've been having anxiety attacks
+      - i can't breathe properly
+      - my mind won't stop
+      - i feel so restless
+      - i'm scared but i don't know why
+
+  - intent: express_stress
+    examples: |
+      - i'm so stressed
+      - i feel overwhelmed
+      - too much to handle
+      - i can't cope
+      - there's too much pressure
+      - i'm burnt out
+      - i have so much work
+      - exams are killing me
+      - university is so stressful
+      - i'm exhausted from everything
+      - i can't keep up
+      - i feel like i'm failing
+      - everything is piling up
+      - i'm so tired of trying
+      - assignments are due and i haven't started
+      - i'm drowning in work
+      - school is too much
+
+  - intent: express_hopelessness
+    examples: |
+      - i feel hopeless
+      - i don't see the point
+      - nothing will get better
+      - i give up
+      - what's the point
+      - i'm worthless
+      - i feel like a burden
+      - nobody cares about me
+      - i don't matter
+      - i feel like disappearing
+      - i hate myself
+      - i can't do anything right
+      - i'm a failure
+      - there's no hope for me
+      - i feel like giving up on everything
+      - i don't think things will ever get better
+      - i feel like i'm trapped
+
+  - intent: express_crisis
+    examples: |
+      - i want to hurt myself
+      - i'm thinking about suicide
+      - i don't want to be here anymore
+      - i want to end it all
+      - i've been thinking about killing myself
+      - i can't go on
+      - i want to die
+      - life isn't worth living
+      - i'm thinking of self harm
+      - i cut myself
+      - i've been hurting myself
+
+  - intent: ask_for_help
+    examples: |
+      - i need help
+      - can you help me
+      - i don't know what to do
+      - i need someone to talk to
+      - i need support
+      - i'm struggling
+      - i need advice
+      - help me please
+      - i don't know how to cope
+      - i need guidance
+
+  - intent: share_positive
+    examples: |
+      - i feel good today
+      - i'm doing well
+      - things are better
+      - i'm happy
+      - today was a good day
+      - i feel great
+      - i'm okay
+      - i feel positive
+      - things are looking up
+      - i passed my exam
+      - i got good news
+
+  - intent: ask_resources
+    examples: |
+      - where can i get help
+      - are there any hotlines
+      - i need a counsellor
+      - what resources are available
+      - who can i call
+      - is there a crisis line
+      - where can i talk to someone
+      - what support is available
+
+  - intent: ask_breathing
+    examples: |
+      - can you help me calm down
+      - teach me breathing exercises
+      - i need to calm down
+      - help me breathe
+      - i need a breathing exercise
+      - how do i calm my anxiety
+      - can we do a breathing exercise
+
+  - intent: small_talk
+    examples: |
+      - how are you
+      - what can you do
+      - tell me about yourself
+      - what are you
+      - who are you
+      - are you a robot
+      - are you real
+      - i'm bored
+      - just wanted to chat
+
+  - intent: thank
+    examples: |
+      - thank you
+      - thanks
+      - thanks a lot
+      - i appreciate it
+      - that helped
+      - you're helpful
+      - that was useful
+      - i feel better now
+      - thank you so much

@@ -1,0 +1,113 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - express_sadness
+  - express_anxiety
+  - express_stress
+  - express_hopelessness
+  - express_crisis
+  - ask_for_help
+  - share_positive
+  - ask_resources
+  - ask_breathing
+  - small_talk
+  - thank
+
+entities:
+  - emotion
+  - trigger
+
+slots:
+  risk_level:
+    type: categorical
+    values:
+      - low
+      - medium
+      - high
+    mappings:
+      - type: custom
+  user_name:
+    type: text
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hey there 👋 I'm Yr, your wellbeing companion. How are you feeling today?"
+    - text: "Hi! I'm Yr. This is a safe space — how's your day going?"
+
+  utter_goodbye:
+    - text: "Take care of yourself. Remember, I'm always here when you need me 💙"
+    - text: "Goodbye for now. You've got this. Come back anytime 🌱"
+
+  utter_acknowledge_sadness:
+    - text: "I hear you. Feeling sad is really hard, and it's okay to feel this way. Would you like to talk about what's been going on?"
+    - text: "Thank you for sharing that with me. Sadness can feel so heavy. What's been weighing on you?"
+
+  utter_acknowledge_anxiety:
+    - text: "Anxiety can be really overwhelming. You're not alone in feeling this. Would a breathing exercise help right now?"
+    - text: "I understand — anxious feelings are exhausting. Let's slow things down together. Want to try a quick grounding exercise?"
+
+  utter_acknowledge_stress:
+    - text: "Sounds like you're carrying a lot right now. Stress can pile up fast, especially at school or uni. What's been the biggest stressor lately?"
+    - text: "That sounds really tough. Let's take this one step at a time — what's been stressing you out the most?"
+
+  utter_acknowledge_hopelessness:
+    - text: "I'm really glad you reached out. Feeling hopeless is one of the hardest feelings, but you don't have to face it alone. Can you tell me more about what's been happening?"
+    - text: "Those feelings sound really painful. I want you to know that what you're feeling matters, and support is available. Are you open to talking more about it?"
+
+  utter_crisis_response:
+    - text: "I'm really concerned about you right now 💙 Please reach out to a counsellor or crisis line immediately. In Malaysia, you can call MIASA at 03-2780-6803 or Befrienders KL at 03-7627-2929. You don't have to go through this alone."
+
+  utter_share_resources:
+    - text: "Here are some resources that might help:\n\n📞 **Befrienders KL**: 03-7627-2929 (24/7)\n📞 **MIASA**: 03-2780-6803\n💬 **Talian Kasih**: 15999\n🌐 **Mental Health Support**: mentalhealthmalaysia.com\n\nWould you like me to suggest some coping activities too?"
+
+  utter_breathing_exercise:
+    - text: "Let's try box breathing together 🌬️\n\n1. **Breathe in** slowly for 4 counts\n2. **Hold** for 4 counts\n3. **Breathe out** for 4 counts\n4. **Hold** for 4 counts\n\nRepeat this 4 times. I'll be right here. How do you feel after?"
+
+  utter_positive_reinforcement:
+    - text: "That's really wonderful to hear! 🌟 What's been going well for you?"
+    - text: "I love hearing that! Positive moments are worth celebrating. Tell me more!"
+
+  utter_affirm_support:
+    - text: "Absolutely. I'm here for you, no matter what. What would feel most helpful right now?"
+
+  utter_thank_response:
+    - text: "You're so welcome. It takes courage to reach out — I'm proud of you for that 💙"
+    - text: "Always here for you. Take it one day at a time 🌱"
+
+  utter_small_talk:
+    - text: "I'm here and ready to chat! Whether you want to talk about how you're feeling or just need some company, I'm all ears 😊"
+
+  utter_suggest_activities:
+    - text: "Sometimes a small activity can shift how we feel. Here are some ideas:\n\n🎮 Try a relaxing game\n🚶 A short walk outside\n📓 Write down 3 things you're grateful for\n🎵 Listen to your favourite music\n\nWhat sounds most appealing?"
+
+  utter_default:
+    - text: "I want to make sure I understand you properly. Could you tell me a bit more about how you're feeling?"
+
+actions:
+  - action_assess_risk
+  - action_set_risk_level
+  - utter_greet
+  - utter_goodbye
+  - utter_acknowledge_sadness
+  - utter_acknowledge_anxiety
+  - utter_acknowledge_stress
+  - utter_acknowledge_hopelessness
+  - utter_crisis_response
+  - utter_share_resources
+  - utter_breathing_exercise
+  - utter_positive_reinforcement
+  - utter_affirm_support
+  - utter_thank_response
+  - utter_small_talk
+  - utter_suggest_activities
+  - utter_default
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
